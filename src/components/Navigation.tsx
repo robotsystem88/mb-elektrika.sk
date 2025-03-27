@@ -49,7 +49,7 @@ export function Navigation() {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed right-4 sm:right-4 top-5 sm:top-6 z-[99999999999999] bg-white/90 backdrop-blur-sm rounded-full shadow-lg p-2 sm:p-3 md:hidden"
+        className="fixed right-4 top-5 sm:top-6 z-[99999999999999] bg-white/90 backdrop-blur-sm rounded-full shadow-lg p-2 sm:mr-0 mr-0.5 sm:p-3 md:hidden"
         aria-label="Toggle navigation menu"
       >
         <MenuIcon className="w-5.5 h-5.5 sm:w-6 sm:h-6" />
@@ -63,7 +63,7 @@ export function Navigation() {
           <button
             key={section.id}
             onClick={() => scrollToSection(section.id)}
-            className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full hover:bg-yellow-500 hover:text-white transition-colors group relative"
+            className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full hover:bg-yellow-500 hover:text-white transition-colors group relative"
             title={t('navigation', section.id)}
           >
             <section.Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />

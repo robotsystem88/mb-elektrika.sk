@@ -28,7 +28,7 @@ export function Process() {
                 </div>
                 <div className="relative z-10 bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group">
                   <div className="bg-yellow-500 text-white p-2 sm:p-3 rounded-lg inline-block mb-3 sm:mb-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8">{icons[key as keyof typeof icons]}</div>
+                    <div className="w-5 h-5 flex items-center justify-center sm:w-6 sm:h-6 md:w-8 md:h-8">{icons[key as keyof typeof icons]}</div>
                   </div>
                   <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 md:mb-4 group-hover:text-yellow-500 transition-colors">{step.title}</h3>
                   <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">{step.description}</p>

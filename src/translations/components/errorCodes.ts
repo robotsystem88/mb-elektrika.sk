@@ -1,7 +1,7 @@
 export const errorCodes = {
   en: {
     title: 'Additional Services',
-    warning: '❌ Independent gear shifting while driving',
+    warning: '❌ Repair of automatic transmission control units',
     subtitle: 'We can read the following error codes for 7G-Tronic (7G) and 9G-Tronic (9G) transmissions:',
     transmission: 'For 7G-Tronic (7G) and 9G-Tronic (9G) transmissions:',
     codes: [
@@ -21,7 +21,7 @@ export const errorCodes = {
   },
   de: {
     title: 'Zusätzliche Dienstleistungen',
-    warning: '❌ Unabhängiges Schalten während der Fahrt',
+    warning: '❌ Reparatur von Steuergeräten für Automatikgetriebe',
     subtitle: 'Wir können folgende Fehlercodes für 7G-Tronic (7G) und 9G-Tronic (9G) Getriebe auslesen:',
     transmission: 'Für 7G-Tronic (7G) und 9G-Tronic (9G) Getriebe:',
     codes: [
@@ -41,7 +41,7 @@ export const errorCodes = {
   },
   ru: {
     title: 'А так же мы делаем следующее',
-    warning: '❌ Независимое переключение передач во время движения',
+    warning: '❌ Ремонт блоков управления автоматических коробок передач',
     subtitle: 'Считываются следующие коды ошибок для коробок передач 7G-Tronic (7G) и 9G-Tronic (9G):',
     transmission: 'Для коробок передач 7G-Tronic (7G) и 9G-Tronic (9G):',
     codes: [
@@ -61,7 +61,7 @@ export const errorCodes = {
   },
   sk: {
     title: 'Dodatočné služby',
-    warning: '❌ Nezávislé radenie počas jazdy',
+    warning: '❌ Oprava riadiacich jednotiek automatickej prevodovky',
     subtitle: 'Dokážeme čítať nasledujúce chybové kódy pre prevodovky 7G-Tronic (7G) a 9G-Tronic (9G):',
     transmission: 'Pre prevodovky 7G-Tronic (7G) a 9G-Tronic (9G):',
     codes: [

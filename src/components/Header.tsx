@@ -4,6 +4,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { SocialMedia } from "./SocialMedia";
 import type { Language } from "../context/LanguageContext";
 import logoImage from "../image/logo.png";
+import banerImage from "../image/baner.png";
 
 type LanguageOption = {
   code: Language;
@@ -54,14 +55,14 @@ export function Header(): JSX.Element {
     <header className="relative min-h-screen">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80"
-          alt="Car battery repair"
+          src={banerImage}
+          alt="baner"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
       </div>
 
-      <nav className="relative z-[99999999999999] container mx-auto px-4 sm:px-6 py-4 sm:py-6">
+      <nav className="relative z-[99999999999999] container mx-auto p-4 sm:p-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2 text-white">
             <div className="lg:hidden relative mr-4" ref={dropdownRef}>
@@ -106,17 +107,11 @@ export function Header(): JSX.Element {
                 ))}
               </div>
             </div>
-            <div className="">
-              <img
-                src={logoImage}
-                alt="logo"
-                className="lg:w-48 md:w-40 w-32 object-cover object-center"
-              />
-            </div>
-            {/* <Battery className="w-6 h-6 sm:w-8 sm:h-8" />
-            <span className="text-lg sm:text-xl font-bold">
-              {t("header", "title")}
-            </span> */}
+            <img
+              src={logoImage}
+              alt="logo"
+              className="lg:w-48 md:w-40 w-32 object-cover object-center"
+            />
           </div>
           <div className="hidden lg:flex items-center space-x-6 text-white">
             <div className="relative" ref={dropdownRef}>
