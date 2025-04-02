@@ -2,6 +2,7 @@ import React from 'react';
 import { Battery, Clock, Shield, PhoneCall } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { submitFormToEmail } from '../utils/emailSubmission';
+import { PhoneInput } from './parts/PhoneInput';
 
 export function CallToAction() {
   const { t } = useLanguage();
@@ -96,13 +97,7 @@ export function CallToAction() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">
                     {t('cta', 'form.phone')}
                   </label>
-                  <input
-                    name="phone"
-                    type="tel"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition"
-                    placeholder={t('cta', 'form.phonePlaceholder')}
-                    required
-                  />
+                  <PhoneInput className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition'/>
                 </div>
                 
                 <div>

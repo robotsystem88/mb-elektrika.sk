@@ -3,6 +3,7 @@ import { Phone, MapPin, Clock } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { SocialMedia } from './SocialMedia';
 import { submitFormToEmail } from '../utils/emailSubmission';
+import { PhoneInput } from './parts/PhoneInput';
 
 export function Contact() {
   const { t } = useLanguage();
@@ -113,13 +114,7 @@ export function Contact() {
             </div>
             <div>
               <label className="block text-sm font-medium mb-2">{t('contact', 'form.phone')}</label>
-              <input
-                name="phone"
-                type="tel"
-                placeholder={t('contact', 'form.phone')}
-                required
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 transition text-sm sm:text-base"
-              />
+              <PhoneInput className='w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 transition text-sm sm:text-base'/>
             </div>
             <div>
               <label className="block text-sm font-medium mb-2">{t('contact', 'form.message')}</label>
