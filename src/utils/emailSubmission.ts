@@ -8,7 +8,7 @@ interface FormData {
 
 const validatePhone = (phone: string): boolean => {
   // Allow +421 and spaces/dashes
-  const phoneRegex = /^(\+421|0)[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}$/;
+  const phoneRegex = /^(\+\d{3}|0)[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}$/;
   return phoneRegex.test(phone.trim());
 };
 
@@ -26,24 +26,29 @@ export async function submitFormToEmail(formData: FormData) {
       name: formData.name.trim()
     };
 
+    const body = {
+      ...cleanData,
+      _subject: formData.model
+        ? `Service Request: ${formData.model} - ${cleanData.name}`
+        : formData.urgency
+          ? `Urgent Service Request from ${cleanData.name}`
+          : `Contact Request from ${cleanData.name}`,
+      _template: 'table',
+      _captcha: false
+    };
+    
+    console.log({body});
+
     const response = await fetch('https://formsubmit.co/iproweb.ua@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify({
-        ...cleanData,
-        _subject: formData.model
-          ? `Service Request: ${formData.model} - ${cleanData.name}`
-          : formData.urgency
-            ? `Urgent Service Request from ${cleanData.name}`
-            : `Contact Request from ${cleanData.name}`,
-        _template: 'table',
-        _captcha: false
-      })
+      body: JSON.stringify(body)
     });
-
+    console.log({response});
+    
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
